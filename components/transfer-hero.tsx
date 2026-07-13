@@ -25,12 +25,12 @@ export function TransferHero({ player }: { player: PlayerData }) {
         alt={player.name}
         style={{
           position: "absolute",
-          top: 0,
+                  top: "-15%",
           right: 0,
-          height: "100%",
+                  height: "115%",
           width: "70%",
           objectFit: "cover",
-          objectPosition: player.objectPosition ?? "top center",
+                  objectPosition: player.objectPosition ?? "center 30%",
         }}
       />
 
