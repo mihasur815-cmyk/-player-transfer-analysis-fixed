@@ -8,7 +8,7 @@ const stones = {
   name: "John Stones",
   nameFirst: "JOHN",
   nameLast: "STONES",
-  photo: "/stones-photo.jpeg",
+    photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/John_Stones_2016-17.jpg/800px-John_Stones_2016-17.jpg",
   position: "Центральний захисник",
   club: "MAN CITY",
   age: "31 РІК",
