@@ -1,11 +1,15 @@
-const stats = [
-  { value: "46", label: "матчів" },
-  { value: "15", label: "голів" },
-  { value: "7", label: "асистів" },
-  { value: "22", label: "рез. дій" },
-]
+export interface StatItem {
+  value: string
+  label: string
+}
 
-export function PlayerStats() {
+export interface PlayerStatsProps {
+  stats: StatItem[]
+  season: string
+  league: string
+}
+
+export function PlayerStats({ stats, season, league }: PlayerStatsProps) {
   return (
     <section className="border-b border-border bg-card/40">
       <div className="mx-auto max-w-5xl px-4 py-8">
@@ -13,11 +17,11 @@ export function PlayerStats() {
           <div className="flex items-center gap-3">
             <span className="h-4 w-1 bg-primary" />
             <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-foreground">
-              Сезон 2025/26
+              Сезон {season}
             </h2>
           </div>
           <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-            Серія А
+            {league}
           </span>
         </div>
 
