@@ -8,7 +8,7 @@ const zinchenko = {
   name: "Олександр Зінченко",
   nameFirst: "ОЛЕКСАНДР",
   nameLast: "ЗІНЧЕНКО",
-    photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Oleksandr_Zinchenko_2018.jpg/800px-Oleksandr_Zinchenko_2018.jpg",
+      photo: "https://resources.premierleague.com/premierleague/photos/players/250x250/p220634.png",
   position: "Лівий захисник",
   club: "AJAX",
   age: "27 РОКІВ",
