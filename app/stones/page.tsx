@@ -8,12 +8,12 @@ const stones = {
   name: "John Stones",
   nameFirst: "JOHN",
   nameLast: "STONES",
-        photo: "https://resources.premierleague.com/premierleague/photos/players/250x250/p97299.png",
+          photo: "https://resources.premierleague.com/premierleague/photos/players/110x140/p97299.png",
   position: "Центральний захисник",
   club: "MAN CITY",
   age: "31 РІК",
   subtitle: "Майбутнє Stones: перехід або продовження? Аналізуємо всі варіанти опцій трансферного вікна 2026.",
-  objectPosition: "50% 10%",
+    objectPosition: "top center",
 }
 
 const stonesStats = [
