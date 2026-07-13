@@ -1,34 +1,14 @@
-const candidates = [
-  {
-    country: "NED",
-    league: "Нідерланди",
-    club: "Ajax",
-    detail: "Подав покращену пропозицію оренди · Липень 2026",
-    probability: 65,
-    status: "Лідер гонки",
-    lead: true,
-  },
-  {
-    country: "ENG",
-    league: "Англія",
-    club: "Everton",
-    detail: "Переговори тривають · офіційний інтерес підтверджено",
-    probability: 20,
-    status: "Активний інтерес",
-    lead: false,
-  },
-  {
-    country: "TUR",
-    league: "Туреччина",
-    club: "Galatasaray",
-    detail: "Зондування · неофіційний контакт",
-    probability: 15,
-    status: "Аутсайдер",
-    lead: false,
-  },
-]
+export interface Candidate {
+  country: string
+  league: string
+  club: string
+  detail: string
+  probability: number
+  status: string
+  lead: boolean
+}
 
-export function CandidatesSection() {
+export function CandidatesSection({ candidates }: { candidates: Candidate[] }) {
   return (
     <section className="mb-14">
       <SectionTitle eyebrow="Ринок">Клуби-кандидати</SectionTitle>
@@ -49,44 +29,31 @@ export function CandidatesSection() {
                   <span className="rounded-sm border border-border bg-secondary px-1.5 py-0.5 font-mono text-[10px] font-bold tracking-wider text-muted-foreground">
                     {c.country}
                   </span>
-                  <span className="font-display text-2xl font-bold uppercase tracking-wide text-foreground">
+                  <span className="font-display text-base font-bold uppercase tracking-tight text-foreground">
                     {c.club}
                   </span>
                   <span
-                    className={`rounded-sm px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
+                    className={`rounded-sm px-2 py-0.5 font-display text-[10px] font-bold uppercase tracking-wider ${
                       c.lead
-                        ? "bg-highlight text-highlight-foreground"
-                        : "bg-secondary text-muted-foreground"
+                        ? "bg-highlight/15 text-highlight"
+                        : "bg-primary/10 text-primary"
                     }`}
                   >
                     {c.status}
                   </span>
                 </div>
-                <p className="mt-2 text-pretty text-sm leading-relaxed text-muted-foreground">
-                  {c.detail}
-                </p>
+                <p className="mt-1.5 text-sm text-muted-foreground">{c.detail}</p>
               </div>
 
               <div className="shrink-0 text-right">
-                <div
-                  className={`font-display text-4xl font-bold leading-none sm:text-5xl ${
-                    c.lead ? "text-highlight" : "text-foreground"
-                  }`}
-                >
+                <div className="font-display text-3xl font-bold leading-none text-foreground">
                   {c.probability}
-                  <span className="text-xl align-top">%</span>
+                  <span className="text-xl text-highlight">%</span>
                 </div>
-                <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-highlight">
                   ймовірність
                 </div>
               </div>
-            </div>
-
-            <div className="mt-5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
-              <div
-                className={`h-full rounded-full transition-all ${c.lead ? "bg-highlight" : "bg-primary"}`}
-                style={{ width: `${c.probability}%` }}
-              />
             </div>
           </div>
         ))}
@@ -99,13 +66,17 @@ function SectionTitle({ children, eyebrow }: { children: React.ReactNode; eyebro
   return (
     <div className="mb-5">
       {eyebrow && (
-        <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">{eyebrow}</span>
+        <div className="mb-1 flex items-center gap-2">
+          <span className="h-4 w-1 bg-primary" />
+          <span className="font-display text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">
+            {eyebrow}
+          </span>
+        </div>
       )}
-      <div className="mt-1 flex items-center gap-3">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-foreground sm:text-3xl">
-          {children}
-        </h2>
-      </div>
+      <h2 className="font-display text-sm font-bold uppercase tracking-tight text-foreground sm:text-base">
+        {children}
+      </h2>
+      <hr className="mt-2 border-border" />
     </div>
   )
 }
