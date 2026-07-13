@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Олександр Зінченко — Трансфер 2026 | Tribuna</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+  body { width: 1080px; height: 1080px; overflow: hidden; background: #0a0e17; font-family: 'Inter', Arial Black, sans-serif; }
+  .card { width: 1080px; height: 1080px; position: relative; overflow: hidden; background: #0a0e17; }
+  .top-bar { position: absolute; top: 0; left: 0; right: 0; height: 6px; background: #F5C518; z-index: 20; }
+  .photo { position: absolute; bottom: 0; right: 0; height: 105%; width: 62%; object-fit: contain; object-position: bottom right; z-index: 2; }
+  .grad-left { position: absolute; inset: 0; background: linear-gradient(to right, #0a0e17 38%, rgba(10,14,23,0.9) 52%, rgba(10,14,23,0.15) 72%, transparent 100%); z-index: 5; }
+  .grad-bottom { position: absolute; inset: 0; background: linear-gradient(to top, #0a0e17 0%, rgba(10,14,23,0.4) 15%, transparent 40%); z-index: 5; }
+  .content { position: absolute; inset: 0; z-index: 10; padding: 80px; display: flex; flex-direction: column; justify-content: space-between; max-width: 560px; }
+  .label { display: flex; align-items: center; gap: 10px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: #F5C518; flex-shrink: 0; }
+  .label-text { color: #F5C518; font-size: 13px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; }
+  .name-first { color: #fff; font-size: 72px; font-weight: 900; line-height: 0.88; text-transform: uppercase; margin-top: 28px; }
+  .name-last { color: #F5C518; font-size: 72px; font-weight: 900; line-height: 0.88; text-transform: uppercase; margin-bottom: 24px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .tag { border: 1px solid; font-size: 11px; padding: 5px 12px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
+  .tag-white { border-color: rgba(255,255,255,0.18); color: rgba(255,255,255,0.55); }
+  .tag-yellow { border-color: rgba(245,197,24,0.4); color: #F5C518; }
+  .divider { width: 40px; height: 2px; background: #F5C518; margin: 20px 0; }
+  .transfer-block { background: rgba(245,197,24,0.06); border: 1px solid rgba(245,197,24,0.2); padding: 20px 24px; margin-bottom: 12px; }
+  .transfer-club { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .club-country { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); font-size: 10px; letter-spacing: 2px; padding: 3px 8px; text-transform: uppercase; font-weight: 700; }
+  .club-name { color: #fff; font-size: 15px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; }
+  .club-status { background: #22c55e20; border: 1px solid #22c55e50; color: #22c55e; font-size: 9px; letter-spacing: 2px; padding: 3px 8px; text-transform: uppercase; font-weight: 700; }
+  .club-detail { color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing: 1px; margin-bottom: 12px; }
+  .prob-bar-bg { width: 100%; height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; }
+  .prob-bar-fill { height: 3px; background: #F5C518; border-radius: 2px; }
+  .prob-label { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; }
+  .prob-text { color: rgba(255,255,255,0.3); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
+  .prob-num { color: #F5C518; font-size: 22px; font-weight: 900; }
+  .prob-pct { color: #F5C518; font-size: 13px; font-weight: 700; }
+  .club-logo { position: absolute; bottom: 80px; right: 80px; width: 70px; height: 70px; object-fit: contain; opacity: 0.85; z-index: 15; }
+  .tribuna-badge { position: absolute; top: 26px; right: 80px; z-index: 20; color: rgba(255,255,255,0.4); font-size: 12px; letter-spacing: 4px; text-transform: uppercase; font-weight: 700; }
+  .tribuna-dot { color: #F5C518; }
+  .ua-flag { display: inline-block; width: 20px; height: 13px; background: linear-gradient(to bottom, #005BBB 50%, #FFD500 50%); margin-right: 8px; vertical-align: middle; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top-bar"></div>
+  <div class="tribuna-badge">TRIBUNA<span class="tribuna-dot">.COM</span></div>
+
+  <img class="photo" src="https://resources.premierleague.com/premierleague/photos/players/110x140/p206325.png" alt="Zinchenko">
+  <div class="grad-left"></div>
+  <div class="grad-bottom"></div>
+  <img class="club-logo" src="https://upload.wikimedia.org/wikipedia/en/7/79/Ajax_Amsterdam.svg" alt="Ajax">
+
+  <div class="content">
+    <div>
+      <div class="label">
+        <div class="dot"></div>
+        <span class="label-text">Трансфер · Літо 2026</span>
+      </div>
+      <div class="name-first"><span class="ua-flag"></span>ОЛЕКСАНДР</div>
+      <div class="name-last">ЗІНЧЕНКО</div>
+      <div class="tags">
+        <span class="tag tag-white">Лівий захисник</span>
+        <span class="tag tag-yellow">Ajax</span>
+        <span class="tag tag-white">27 років</span>
+      </div>
+      <div class="divider"></div>
+    </div>
+
+    <div>
+      <div class="transfer-block">
+        <div class="transfer-club">
+          <span class="club-country">NED</span>
+          <span class="club-name">AJAX</span>
+          <span class="club-status">Лідер гонки</span>
+        </div>
+        <div class="club-detail">Підписаний контракт · Опція викупу — Червень 2026</div>
+        <div class="prob-bar-bg"><div class="prob-bar-fill" style="width:60%"></div></div>
+        <div class="prob-label">
+          <span class="prob-text">Імовірність</span>
+          <span><span class="prob-num">60</span><span class="prob-pct">%</span></span>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:16px 24px;">
+        <div class="transfer-club">
+          <span class="club-country">ENG</span>
+          <span class="club-name">ARSENAL</span>
+          <span style="background:#f59e0b20;border:1px solid #f59e0b50;color:#f59e0b;font-size:9px;letter-spacing:2px;padding:3px 8px;text-transform:uppercase;font-weight:700;">Активний інтерес</span>
+        </div>
+        <div class="prob-bar-bg"><div style="height:3px;background:rgba(255,255,255,0.2);border-radius:2px;width:25%"></div></div>
+        <div class="prob-label">
+          <span class="prob-text">Імовірність</span>
+          <span><span style="color:rgba(255,255,255,0.4);font-size:22px;font-weight:900;">25</span><span style="color:rgba(255,255,255,0.4);font-size:13px;font-weight:700;">%</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
