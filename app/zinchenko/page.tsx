@@ -14,6 +14,7 @@ const zinchenko = {
   age: "27 РОКІВ",
   subtitle: "Зінченко вже в Ajax — наступний крок або перехід? Аналізуємо трансферну ситуацію українського захисника.",
     objectPosition: "top center",
+    clubLogo: "https://upload.wikimedia.org/wikipedia/en/7/79/Ajax_Amsterdam.svg",
 }
 
 const zinchenkoStats = [
