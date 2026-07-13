@@ -5,6 +5,7 @@ export interface PlayerData {
   photo: string
   position: string
   club: string
+  clubLogo?: string
   age: string
   subtitle: string
   objectPosition?: string
@@ -19,22 +20,22 @@ export function TransferHero({ player }: { player: PlayerData }) {
       {/* BG */}
       <div className="absolute inset-0 bg-[#0a0e17]" />
 
-      {/* Photo — full height, anchored right, top visible */}
+      {/* Photo */}
       <img
         src={player.photo}
         alt={player.name}
         style={{
           position: "absolute",
-                  top: "-15%",
+          top: "-15%",
           right: 0,
-                  height: "115%",
+          height: "115%",
           width: "70%",
           objectFit: "cover",
-                  objectPosition: player.objectPosition ?? "center 30%",
+          objectPosition: player.objectPosition ?? "center 30%",
         }}
       />
 
-      {/* Gradient: strong on left for text, fade to transparent right */}
+      {/* Gradient left */}
       <div
         className="absolute inset-0"
         style={{
@@ -42,7 +43,7 @@ export function TransferHero({ player }: { player: PlayerData }) {
             "linear-gradient(to right, #0a0e17 35%, rgba(10,14,23,0.75) 55%, rgba(10,14,23,0.1) 75%, transparent 100%)",
         }}
       />
-      {/* Gradient: bottom fade */}
+      {/* Gradient bottom */}
       <div
         className="absolute inset-0"
         style={{
@@ -50,6 +51,26 @@ export function TransferHero({ player }: { player: PlayerData }) {
             "linear-gradient(to top, #0a0e17 0%, rgba(10,14,23,0.4) 20%, transparent 50%)",
         }}
       />
+
+      {/* Club logo overlay — bottom right corner */}
+      {player.clubLogo && (
+        <div
+          className="absolute"
+          style={{ bottom: "32px", right: "32px", zIndex: 10 }}
+        >
+          <img
+            src={player.clubLogo}
+            alt={player.club}
+            style={{
+              width: "96px",
+              height: "96px",
+              objectFit: "contain",
+              opacity: 0.85,
+              filter: "drop-shadow(0 0 12px rgba(0,0,0,0.8))",
+            }}
+          />
+        </div>
+      )}
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col justify-end pb-12 px-10 max-w-lg">
