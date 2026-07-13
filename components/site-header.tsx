@@ -1,10 +1,17 @@
 import { TribunaLogo } from "@/components/tribuna-logo"
+import Link from "next/link"
+
+const players = [
+  { href: "/", label: "Довбик" },
+  { href: "/stones", label: "Stones" },
+  { href: "/zinchenko", label: "Зінченко" },
+]
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center gap-2.5">
           <TribunaLogo className="h-8 w-8" />
           <div className="flex flex-col leading-none">
             <span className="font-display text-lg font-bold uppercase tracking-[0.15em] text-foreground">
@@ -14,11 +21,18 @@ export function SiteHeader() {
               Football
             </span>
           </div>
-        </div>
+        </Link>
+
         <nav className="flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-          <span className="rounded-sm bg-primary px-3 py-1.5 text-primary-foreground">Трансфери</span>
-          <span className="hidden px-3 py-1.5 transition-colors hover:text-foreground sm:inline">Серія А</span>
-          <span className="hidden px-3 py-1.5 transition-colors hover:text-foreground sm:inline">Аналітика</span>
+          {players.map((p) => (
+            <Link
+              key={p.href}
+              href={p.href}
+              className="rounded-sm px-3 py-1.5 transition-colors hover:bg-primary/10 hover:text-foreground"
+            >
+              {p.label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
