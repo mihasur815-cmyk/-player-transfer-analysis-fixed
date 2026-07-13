@@ -8,12 +8,14 @@ const stones = {
   name: "John Stones",
   nameFirst: "JOHN",
   nameLast: "STONES",
-          photo: "https://resources.premierleague.com/premierleague/photos/players/110x140/p97299.png",
+  photo: "/stones.jpeg",
   position: "Центральний захисник",
   club: "MAN CITY",
   age: "31 РІК",
-  subtitle: "Майбутнє Stones: перехід або продовження? Аналізуємо всі варіанти опцій трансферного вікна 2026.",
-  objectPosition: "50% 0%",    clubLogo: "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+  subtitle:
+    "Контракт спливає за рік. «Сіті» тягне з новою угодою — і на 31-річного захисника вже задивляються.",
+  objectPosition: "50% 12%",
+  clubLogo: "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
 }
 
 const stonesStats = [
@@ -28,17 +30,17 @@ const stonesCandidates = [
     country: "ENG",
     league: "Англія",
     club: "Man City",
-    detail: "Подовження контракту · Переговори тривають — Липень 2026",
-    probability: 55,
+    detail: "Переговори про нову угоду · клуб хоче зберегти досвід у ротації",
+    probability: 58,
     status: "Лідер гонки",
     lead: true,
   },
   {
-    country: "ESP",
-    league: "Іспанія",
-    club: "Barcelona",
-    detail: "Неофіційний інтерес · зондування на ринку",
-    probability: 25,
+    country: "KSA",
+    league: "Саудівська Аравія",
+    club: "Al-Nassr",
+    detail: "Готові на великий контракт для 31-річного · реальний варіант",
+    probability: 27,
     status: "Активний інтерес",
     lead: false,
   },
@@ -46,8 +48,8 @@ const stonesCandidates = [
     country: "GER",
     league: "Німеччина",
     club: "Bayern",
-    detail: "Слабкий інтерес · неофіційний контакт",
-    probability: 20,
+    detail: "Зондування на випадок зриву переговорів із «Сіті»",
+    probability: 15,
     status: "Аутсайдер",
     lead: false,
   },
@@ -58,16 +60,16 @@ export default function StonesPage() {
     <main className="min-h-screen bg-background">
       <SiteHeader />
       <TransferHero player={stones} />
-      <PlayerStats stats={stonesStats} season="2025/26" league="Англійська Премьєр-ліга" />
+      <PlayerStats stats={stonesStats} season="2025/26" league="Англійська Прем'єр-ліга" />
       <div className="mx-auto max-w-3xl px-4 pb-24 pt-12">
         <CandidatesSection candidates={stonesCandidates} />
         <EditorialOpinion
-          verdict="Stones — один з найкомплетніших центральних захисників Европи."
+          verdict="«Сіті» не поспішає — і саме тому Стоунз тримає всі козирі."
           paragraphs={[
-            "Прі нього мічні позиційні навички, драйв у високій пресінгу та виведення м'ячів в атаку — це робить його унікальним цінним активом.",
-            "Man City хоче утримати гравця, проте рішення залежить від переговорної позиції самого гравця.",
+            "Коли Стоунз здоровий, він досі найтехнічніший центрбек Гвардіоли: пас під тиском, вихід у півзахист і читання гри роблять його незамінним у побудові атак.",
+            "Питання одне — фізика. Нескінченні м'язові травми з'їли два сезони, і саме через них «Сіті» не квапиться з новим довгостроковим контрактом.",
           ]}
-          closing="Рішення очікується до кінця серпня."
+          closing="Найімовірніше — компромісне продовження на рік-два, а не гучний трансфер."
         />
       </div>
     </main>

@@ -8,12 +8,14 @@ const zinchenko = {
   name: "Олександр Зінченко",
   nameFirst: "ОЛЕКСАНДР",
   nameLast: "ЗІНЧЕНКО",
-          photo: "https://resources.premierleague.com/premierleague/photos/players/110x140/p206325.png",
+  photo: "/zinchenko.jpeg",
   position: "Лівий захисник",
   club: "AJAX",
-  age: "27 РОКІВ",
-  subtitle: "Зінченко вже в Ajax — наступний крок або перехід? Аналізуємо трансферну ситуацію українського захисника.",
-  objectPosition: "50% 0%",    clubLogo: "https://upload.wikimedia.org/wikipedia/en/7/79/Ajax_Amsterdam.svg",
+  age: "28 РОКІВ",
+  subtitle:
+    "Оренда в Ajax завершується влітку. Чи стане перехід постійним — і що з поверненням в «Арсенал»?",
+  objectPosition: "62% 14%",
+  clubLogo: "https://upload.wikimedia.org/wikipedia/en/7/79/Ajax_Amsterdam.svg",
 }
 
 const zinchenkoStats = [
@@ -28,27 +30,27 @@ const zinchenkoCandidates = [
     country: "NED",
     league: "Нідерланди",
     club: "Ajax",
-    detail: "Підписаний контракт · Опція викупу — Червень 2026",
-    probability: 60,
+    detail: "Опція викупу в контракті · клуб схиляється її активувати",
+    probability: 68,
     status: "Лідер гонки",
     lead: true,
+  },
+  {
+    country: "TUR",
+    league: "Туреччина",
+    club: "Galatasaray",
+    detail: "Готові до трансферу, якщо Ajax не викупить · попередній інтерес",
+    probability: 20,
+    status: "Активний інтерес",
+    lead: false,
   },
   {
     country: "ENG",
     league: "Англія",
     club: "Arsenal",
-    detail: "Колишній клуб · інтерес до повернення слабкий",
-    probability: 25,
-    status: "Активний інтерес",
-    lead: false,
-  },
-  {
-    country: "ESP",
-    league: "Іспанія",
-    club: "Atletico",
-    detail: "Слабкий інтерес · неофіційний контакт",
-    probability: 15,
-    status: "Аутсайдер",
+    detail: "Формально контракт до 2026 · шлях в основу закритий",
+    probability: 12,
+    status: "Малоймовірно",
     lead: false,
   },
 ]
@@ -62,12 +64,12 @@ export default function ZinchenkoPage() {
       <div className="mx-auto max-w-3xl px-4 pb-24 pt-12">
         <CandidatesSection candidates={zinchenkoCandidates} />
         <EditorialOpinion
-          verdict="Зінченко відродився в Ajax і знову виглядає живим та небезпечним варіантом."
+          verdict="Оренда в Ajax — не крок назад, а спосіб знову грати щотижня."
           paragraphs={[
-            "9 асистів за сезон говорять про те, що фізично гравець вирішив проблеми з здоровʼям.",
-            "Ajax має опцію викупу, і все вказує на те, що клуб її активує до кінця літа.",
+            "В «Арсеналі» його час вичерпався: Артета давно бачить лівий фланг інакше, і шлях у стартовий склад лондонців фактично закритий.",
+            "В Амстердамі — навпаки: стабільні 90 хвилин, роль лідера в побудові атак і 9 асистів, які нагадали, чому Зінченко колись коштував «Арсеналу» 35 мільйонів.",
           ]}
-          closing="Рішення очікується вже у липні."
+          closing="Найлогічніший фінал — Ajax активує опцію викупу ще до старту сезону."
         />
       </div>
     </main>
