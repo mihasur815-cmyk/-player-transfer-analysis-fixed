@@ -13,8 +13,7 @@ const stones = {
   club: "MAN CITY",
   age: "31 РІК",
   subtitle: "Майбутнє Stones: перехід або продовження? Аналізуємо всі варіанти опцій трансферного вікна 2026.",
-    objectPosition: "top center",
-    clubLogo: "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+  objectPosition: "50% 0%",    clubLogo: "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
 }
 
 const stonesStats = [
