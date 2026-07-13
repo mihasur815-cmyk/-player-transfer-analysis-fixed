@@ -1,6 +1,12 @@
 import { TribunaLogo } from "@/components/tribuna-logo"
 
-export function EditorialOpinion() {
+export interface EditorialOpinionProps {
+  verdict: string
+  paragraphs: string[]
+  closing: string
+}
+
+export function EditorialOpinion({ verdict, paragraphs, closing }: EditorialOpinionProps) {
   return (
     <section>
       <div className="mb-5">
@@ -23,7 +29,7 @@ export function EditorialOpinion() {
           <div className="flex items-center gap-2.5">
             <TribunaLogo className="h-8 w-8" />
             <div className="flex flex-col leading-tight">
-              <span className="font-display text-sm font-bold uppercase tracking-wide text-foreground">
+              <span className="font-display text-sm font-bold uppercase tracking-[0.15em] text-foreground">
                 Tribuna<span className="text-highlight">.com</span>
               </span>
               <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-highlight">
@@ -34,13 +40,11 @@ export function EditorialOpinion() {
 
           <blockquote className="mt-5 text-pretty text-lg leading-relaxed text-foreground/90 sm:text-xl">
             <p>
-              <strong className="font-semibold text-foreground">
-                Довбик залишається одним із найнедооцінених форвардів Серії А.
-              </strong>{" "}
-              Попри складний сезон в Римі, його цифри говорять самі за себе — 15 голів і 7 асистів
-              у 46 матчах. Ajax виглядає найреалістичнішим варіантом: оренда з опцією викупу
-              дозволить гравцю відновити форму та довести свій рівень на міжнародній арені.{" "}
-              <strong className="font-semibold text-highlight">Рішення очікується до кінця липня.</strong>
+              <strong className="font-semibold text-foreground">{verdict}</strong>{" "}
+              {paragraphs.map((p, i) => (
+                <span key={i}>{p}{" "}</span>
+              ))}
+              <strong className="font-semibold text-highlight">{closing}</strong>
             </p>
           </blockquote>
         </div>
