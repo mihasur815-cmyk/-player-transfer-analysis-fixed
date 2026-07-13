@@ -8,12 +8,12 @@ const zinchenko = {
   name: "Олександр Зінченко",
   nameFirst: "ОЛЕКСАНДР",
   nameLast: "ЗІНЧЕНКО",
-        photo: "https://resources.premierleague.com/premierleague/photos/players/250x250/p206325.png",
+          photo: "https://resources.premierleague.com/premierleague/photos/players/110x140/p206325.png",
   position: "Лівий захисник",
   club: "AJAX",
   age: "27 РОКІВ",
   subtitle: "Зінченко вже в Ajax — наступний крок або перехід? Аналізуємо трансферну ситуацію українського захисника.",
-  objectPosition: "50% 10%",
+    objectPosition: "top center",
 }
 
 const zinchenkoStats = [
