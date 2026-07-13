@@ -13,7 +13,7 @@ const dovbyk = {
   club: "РОМА",
   age: "28 РОКІВ",
   subtitle: "Куди перейде український форвард цього літа? Слідкуємо за ймовірностями, клубами-кандидатами та останніми новинами трансферного вікна.",
-    objectPosition: "center 5%",
+      objectPosition: "top center",
 }
 
 const dovbykStats = [
