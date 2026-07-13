@@ -14,6 +14,7 @@ const dovbyk = {
   age: "28 РОКІВ",
   subtitle: "Куди перейде український форвард цього літа? Слідкуємо за ймовірностями, клубами-кандидатами та останніми новинами трансферного вікна.",
       objectPosition: "top center",
+    clubLogo: "https://upload.wikimedia.org/wikipedia/en/f/f7/AS_Roma_logo_%282017%29.svg",
 }
 
 const dovbykStats = [
